@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    div.container {
+    .container {
       width: 80%;
       margin: auto;
     }
