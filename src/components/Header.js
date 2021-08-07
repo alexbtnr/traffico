@@ -69,7 +69,7 @@ const StyledHeader = styled.header`
   img.people {
     position: absolute;
     top: 28rem;
-
+    height: 30rem;
     z-index: 4;
     left: 48%;
   }
