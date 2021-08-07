@@ -11,7 +11,7 @@ const Logo = () => {
 };
 
 const StyledLogo = styled.div`
-  width: 40%;
+  width: 50%;
 `;
 
 export default Logo;
