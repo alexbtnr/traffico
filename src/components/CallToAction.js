@@ -20,7 +20,7 @@ const StyledHero = styled.div`
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
+    font-size: 90px;
     line-height: 100%;
     margin-bottom: 3rem;
     color: #ffffff;
