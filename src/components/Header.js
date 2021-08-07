@@ -29,6 +29,7 @@ const StyledHeader = styled.header`
     left: 0;
     z-index: -1;
     background: linear-gradient(297.17deg, #ffedba 6.67%, #ee4d47 91.82%);
+    border-radius: 0 0 11% 0;
   }
 
   .navbar-container {
