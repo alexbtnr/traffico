@@ -21,10 +21,8 @@ const StyledHeader = styled.header`
   background-size: 80% 100%;
 
   .container {
-    /* height: 5rem; */
     margin: auto;
     padding-top: 3rem;
-    /* background: red; */
     display: flex;
     justify-content: space-between;
     align-items: center;

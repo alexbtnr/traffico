@@ -12,11 +12,6 @@ const Logo = () => {
 
 const StyledLogo = styled.div`
   width: 40%;
-  /* background: blue; */
-
-  img {
-    /* display: block; */
-  }
 `;
 
 export default Logo;
