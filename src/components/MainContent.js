@@ -1,11 +1,13 @@
 import React from "react";
 import AboutUs from "./AboutUs";
+import HowToApply from "./HowToApply";
 
 const MainContent = () => {
   return (
-    <div>
+    <main>
       <AboutUs />
-    </div>
+      <HowToApply />
+    </main>
   );
 };
 

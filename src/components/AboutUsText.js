@@ -16,12 +16,6 @@ const AboutUsText = () => {
 
 const StyledAboutUsText = styled.div`
   margin-bottom: 3rem;
-  h2.section-title {
-    margin-bottom: 3rem;
-  }
-  p.section-paragraph {
-    /* font-size: 1rem; */
-  }
 `;
 
 export default AboutUsText;
