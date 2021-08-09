@@ -10,7 +10,7 @@ const Navbar = () => {
         <li className='main-nav-link'>How To</li>
         <li className='main-nav-link'>Faqs</li>
         <li className='main-nav-btn'>
-          <ReusableButton />
+          <ReusableButton text='Contact us' />
         </li>
       </ul>
     </StyledNavbar>
@@ -18,11 +18,11 @@ const Navbar = () => {
 };
 
 const StyledNavbar = styled.nav`
-  width: 60%;
+  width: 50%;
 
   ul.main-nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     li.main-nav-link {
