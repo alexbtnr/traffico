@@ -3,6 +3,7 @@ import styled from "styled-components";
 import FaqTitle from "./FaqTitle";
 import SideImage from "./SideImage";
 import confusedMan from "../images/confusedMan.png";
+import QuestionsContainer from "./QuestionsContainer";
 
 const Faq = () => {
   return (
@@ -17,6 +18,7 @@ const Faq = () => {
             <SideImage img={confusedMan} imgAlt='Confused Man' />
           </div>
         </div>
+        <QuestionsContainer />
       </div>
     </StyledFaq>
   );
