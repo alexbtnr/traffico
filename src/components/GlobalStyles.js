@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
       letter-spacing: 0.1em;
       color: #ee4d47;
       text-transform: uppercase;
+      margin-bottom: 3rem;
     }
 
     p.section-paragraph {

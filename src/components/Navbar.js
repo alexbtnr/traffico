@@ -9,7 +9,9 @@ const Navbar = () => {
         <li className='main-nav-link'>
           <a href='#about'>About</a>
         </li>
-        <li className='main-nav-link'>How To</li>
+        <li className='main-nav-link'>
+          <a href='#apply'>How To</a>
+        </li>
         <li className='main-nav-link'>Faqs</li>
         <li className='main-nav-btn'>
           <ReusableButton text='Contact us' />
