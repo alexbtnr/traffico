@@ -9,10 +9,6 @@ const SideImage = ({ img, imgAlt }) => {
   );
 };
 
-const StyledSideImg = styled.aside`
-  img {
-    /* width: 80%; */
-  }
-`;
+const StyledSideImg = styled.aside``;
 
 export default SideImage;

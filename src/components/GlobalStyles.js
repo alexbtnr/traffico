@@ -7,6 +7,10 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body{
+    overflow-x: hidden;
+  }
+
   html {
     scroll-behavior: smooth;
   }

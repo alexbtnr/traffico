@@ -4,19 +4,29 @@ import AboutUsCard from "./AboutUsCard";
 import AboutUsText from "./AboutUsText";
 import SideImage from "./SideImage";
 import manWithTruck from "../images/manWithTruck.png";
+import { enterFromRight } from "../utils/animations";
+import { useScroll } from "../utils/useScroll";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <StyledAboutUs className='my-10' id='about'>
+    <StyledAboutUs ref={element} className='my-10' id='about'>
       <div className='container'>
         <div className='flex-container'>
           <div className='flex-left'>
             <AboutUsText />
             <AboutUsCard />
           </div>
-          <div className='flex-right'>
+          <motion.div
+            variants={enterFromRight}
+            animate={controls}
+            initial='hidden'
+            className='flex-right'
+          >
             <SideImage img={manWithTruck} imgAlt='Man with truck' />
-          </div>
+          </motion.div>
         </div>
       </div>
     </StyledAboutUs>
