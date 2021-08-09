@@ -8,8 +8,12 @@ import truck from "../images/truck.png";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import CallToAction from "./CallToAction";
+import { motion } from "framer-motion";
+import { enterFromLeft } from "../utils/animations";
+import { useScroll } from "../utils/useScroll";
 
 const Header = () => {
+  const [element, controls] = useScroll();
   return (
     <StyledHeader>
       <div className='hero-background-container'>
@@ -25,7 +29,16 @@ const Header = () => {
         </div>
         <CallToAction />
       </div>
-      <img className='truck' src={truck} alt='' />
+      <div ref={element} className='truck-img-container'>
+        <motion.img
+          variants={enterFromLeft}
+          initial='hidden'
+          animate={controls}
+          className='truck'
+          src={truck}
+          alt='truck'
+        />
+      </div>
     </StyledHeader>
   );
 };
