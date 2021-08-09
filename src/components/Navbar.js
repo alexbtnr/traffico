@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <ul className='main-nav'>
-        <li className='main-nav-link'>About</li>
+        <li className='main-nav-link'>
+          <a href='#about'>About</a>
+        </li>
         <li className='main-nav-link'>How To</li>
         <li className='main-nav-link'>Faqs</li>
         <li className='main-nav-btn'>
@@ -32,6 +34,17 @@ const StyledNavbar = styled.nav`
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #ffffff;
+
+      &::after {
+        display: block;
+        content: "";
+        border-bottom: solid 2px #fff;
+        transform: scaleX(0);
+        transition: all 250ms ease-in-out;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+      }
     }
   }
 `;
