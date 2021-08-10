@@ -34,6 +34,13 @@ const StyledReusableButton = styled.button`
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: #402b2b;
+    transform: scale(1.1);
+  }
 `;
 
 const StyledLongReusableButton = styled.button`
@@ -55,6 +62,12 @@ const StyledLongReusableButton = styled.button`
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: #402b2b;
+    transform: scale(1.1);
+  }
 `;
 
 export default ReusableButton;

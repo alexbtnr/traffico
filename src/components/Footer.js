@@ -116,6 +116,7 @@ const StyledFooter = styled.div`
             font-weight: 300;
             font-size: 16px;
             line-height: 40px;
+            cursor: pointer;
           }
 
           .form-group {

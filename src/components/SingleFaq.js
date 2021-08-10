@@ -38,6 +38,16 @@ const StyledSingleFaq = styled.li`
     border-radius: 10px;
     max-height: 25.5rem;
 
+    &:hover {
+      .faq-title {
+        background: #ee4d47;
+        h4,
+        button {
+          color: #fff7f5;
+        }
+      }
+    }
+
     .faq-title {
       transition: all 1s ease-out;
 
