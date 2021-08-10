@@ -3,6 +3,7 @@ import styled from "styled-components";
 import smallTruck from "../images/smallTruck.png";
 import FooterForm from "./FooterForm";
 import FooterNav from "./FooterNav";
+import SocialMedia from "./SocialMedia";
 
 const Footer = () => {
   return (
@@ -14,6 +15,7 @@ const Footer = () => {
           <FooterForm />
           <FooterNav />
         </div>
+        <SocialMedia />
       </footer>
     </StyledFooter>
   );
