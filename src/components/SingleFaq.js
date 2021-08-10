@@ -39,6 +39,8 @@ const StyledSingleFaq = styled.li`
     max-height: 25.5rem;
 
     .faq-title {
+      transition: all 1s ease-out;
+
       button {
         width: 15%;
         color: #ee4d47;
@@ -71,10 +73,9 @@ const StyledSingleFaq = styled.li`
     }
 
     .faq-answer {
-      opacity: 0;
       max-height: 0;
       overflow-y: hidden;
-      transition: all 0.4s ease;
+      transition: all 1s ease;
     }
   }
 
@@ -90,6 +91,11 @@ const StyledSingleFaq = styled.li`
           transform: rotate(0deg);
         }
       }
+    }
+
+    .faq-answer {
+      height: auto;
+      max-height: 1000px;
     }
   }
 
