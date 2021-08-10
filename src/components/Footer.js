@@ -55,11 +55,11 @@ const Footer = () => {
 
 const StyledFooter = styled.div`
   position: relative;
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
 
   img.small-truck {
     position: absolute;
-    top: -25%;
+    top: -35%;
   }
 
   .background-color {
@@ -74,7 +74,7 @@ const StyledFooter = styled.div`
   }
 
   div.container {
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
 
     .form-flex {
       display: flex;
@@ -95,13 +95,16 @@ const StyledFooter = styled.div`
         border-radius: 5px 0 0 5px;
       }
       .flex-right {
+        position: relative;
+        top: -5rem;
         max-width: 50%;
         min-width: 50%;
-
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
         .contact-form {
           height: 440px;
           background: #ffffff;
           box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+
           border-radius: 10px;
           display: flex;
           flex-direction: column;
