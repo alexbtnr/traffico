@@ -20,6 +20,7 @@ const ReusableButton = ({ text, icon, longBtn }) => {
 };
 
 const StyledReusableButton = styled.button`
+  cursor: pointer;
   background: #ee4d47;
   border: none;
   border-radius: 5px;
@@ -36,6 +37,7 @@ const StyledReusableButton = styled.button`
 `;
 
 const StyledLongReusableButton = styled.button`
+  cursor: pointer;
   background: #ee4d47;
   border: none;
   border-radius: 5px;
