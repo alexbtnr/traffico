@@ -4,6 +4,7 @@ import SingleFaq from "./SingleFaq";
 
 const QuestionsContainer = () => {
   const [questions, setQuestions] = useState([]);
+  const [openQuestions, setOpenQuestions] = useState(questions);
 
   const getQuestions = async () => {
     try {
@@ -15,11 +16,29 @@ const QuestionsContainer = () => {
         throw Error(response.status + " " + response.statusText);
       }
       const data = await response.json();
-      setQuestions(data.response);
-      console.log(data.response);
+      const finalData = data.response.map((obj) => ({
+        ...obj,
+        active: false,
+      }));
+      setQuestions(finalData);
+      console.log(finalData);
     } catch (error) {
       console.log(error.message);
     }
+  };
+
+  const toggleFaq = (index) => {
+    setQuestions(
+      questions.map((faq, i) => {
+        if (i === index) {
+          faq.active = !faq.active;
+        } else {
+          faq.active = false;
+        }
+
+        return faq;
+      })
+    );
   };
 
   useEffect(() => {
@@ -30,7 +49,12 @@ const QuestionsContainer = () => {
     <StyledQuestionsContainer>
       <ul>
         {questions.map((question, index) => (
-          <SingleFaq key={index} question={question} index={index} />
+          <SingleFaq
+            key={index}
+            question={question}
+            index={index}
+            toggleFaq={toggleFaq}
+          />
         ))}
       </ul>
     </StyledQuestionsContainer>

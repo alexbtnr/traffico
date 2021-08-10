@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const SingleFaq = ({ question, index }) => {
+const SingleFaq = ({ question, index, toggleFaq }) => {
   return (
-    <StyledSingleFaq>
+    <StyledSingleFaq
+      className={`faq ${question.active ? "open" : ""}`}
+      onClick={() => toggleFaq(index)}
+    >
       <div className='faq-title'>
         <h4 className='title'>
           {question.title.substring(1, 2) === "."
