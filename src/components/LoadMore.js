@@ -27,6 +27,15 @@ const StyledLoadMore = styled.li`
     border-radius: 10px;
     cursor: pointer;
     position: relative;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background: #ed4d47;
+      h4,
+      button {
+        color: #f9cdc8;
+      }
+    }
 
     h4 {
       font-family: Rubik;
