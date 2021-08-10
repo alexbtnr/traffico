@@ -30,14 +30,7 @@ const QuestionsContainer = () => {
     <StyledQuestionsContainer>
       <ul>
         {questions.map((question, index) => (
-          <li>
-            <SingleFaq question={question} index={index} />
-            {/* {question.title.substring(1, 2) === "."
-              ? question.title.substring(3)
-              : question.title.substring(2, 3) === "."
-              ? question.title.substring(4)
-              : question.title} */}
-          </li>
+          <SingleFaq key={index} question={question} index={index} />
         ))}
       </ul>
     </StyledQuestionsContainer>
@@ -46,7 +39,6 @@ const QuestionsContainer = () => {
 
 const StyledQuestionsContainer = styled.div`
   padding: 10rem 0;
-
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

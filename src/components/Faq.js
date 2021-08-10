@@ -31,7 +31,7 @@ const StyledFaq = styled.section`
   .background-color {
     position: absolute;
     width: 80%;
-    height: 1500px;
+    height: 100%;
     top: 0;
     right: 0;
     background: #fdede8;
