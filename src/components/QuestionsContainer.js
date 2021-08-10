@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import LoadMore from "./LoadMore";
 import SingleFaq from "./SingleFaq";
 
 const QuestionsContainer = () => {
@@ -56,6 +57,8 @@ const QuestionsContainer = () => {
             toggleFaq={toggleFaq}
           />
         ))}
+        <li className='nothing'>nothing</li>
+        <LoadMore />
       </ul>
     </StyledQuestionsContainer>
   );
@@ -67,6 +70,10 @@ const StyledQuestionsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 2rem;
+
+    li.nothing {
+      visibility: hidden;
+    }
   }
 `;
 
