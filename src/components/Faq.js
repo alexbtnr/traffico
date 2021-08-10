@@ -40,7 +40,7 @@ const StyledFaq = styled.section`
   }
 
   div.container {
-    padding: 10rem 0;
+    padding: 10rem 0 5rem;
     div.flex-container {
       display: flex;
       justify-content: space-between;
