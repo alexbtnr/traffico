@@ -5,7 +5,8 @@ import SingleFaq from "./SingleFaq";
 
 const QuestionsContainer = () => {
   const [questions, setQuestions] = useState([]);
-  const [openQuestions, setOpenQuestions] = useState(questions);
+  const [moreQuestions, setmoreQuestions] = useState([]);
+  const [showMore, setShowMore] = useState(false);
 
   const getQuestions = async () => {
     try {
@@ -25,6 +26,15 @@ const QuestionsContainer = () => {
       console.log(finalData);
     } catch (error) {
       console.log(error.message);
+    }
+  };
+
+  const getMoreQuestions = () => {
+    setmoreQuestions(questions);
+    setShowMore(!showMore);
+
+    if (showMore) {
+      setmoreQuestions([]);
     }
   };
 
@@ -57,8 +67,33 @@ const QuestionsContainer = () => {
             toggleFaq={toggleFaq}
           />
         ))}
+
+        {moreQuestions.length > 0 && (
+          <SingleFaq
+            className={
+              moreQuestions.length > 0 ? "more-questions" : "less-questions"
+            }
+            question={questions[0]}
+            key={0}
+            index={0}
+            toggleFaq={toggleFaq}
+          />
+        )}
+
+        {moreQuestions.length > 0 && (
+          <SingleFaq
+            className={
+              moreQuestions.length > 0 ? "more-questions" : "less-questions"
+            }
+            question={questions[1]}
+            key={1}
+            index={1}
+            toggleFaq={toggleFaq}
+          />
+        )}
+
         <li className='nothing'>nothing</li>
-        <LoadMore />
+        <LoadMore showMore={showMore} getMoreQuestions={getMoreQuestions} />
       </ul>
     </StyledQuestionsContainer>
   );
@@ -73,6 +108,13 @@ const StyledQuestionsContainer = styled.div`
 
     li.nothing {
       visibility: hidden;
+    }
+
+    li.more-questions {
+      display: block;
+    }
+    li.less-questions {
+      display: none;
     }
   }
 `;
