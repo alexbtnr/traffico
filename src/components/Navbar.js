@@ -12,7 +12,9 @@ const Navbar = () => {
         <li className='main-nav-link'>
           <a href='#apply'>How To</a>
         </li>
-        <li className='main-nav-link'>Faqs</li>
+        <li className='main-nav-link'>
+          <a href='#faq'>Faqs</a>
+        </li>
         <li className='main-nav-btn'>
           <ReusableButton text='Contact us' />
         </li>
