@@ -25,7 +25,6 @@ const QuestionsContainer = () => {
         active: false,
       }));
       setQuestions(finalData);
-      console.log(finalData);
     } catch (error) {
       console.log(error.message);
     }
