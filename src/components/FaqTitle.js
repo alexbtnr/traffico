@@ -22,6 +22,12 @@ const StyledFaqText = styled.div`
     font-size: 48px;
     line-height: 140%;
   }
+
+  @media (max-width: 830px) {
+    h3.section-subtitle {
+      font-size: 30px;
+    }
+  }
 `;
 
 export default FaqTitle;

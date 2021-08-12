@@ -1,9 +1,24 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-const SingleFaq = ({ question, index, toggleFaq }) => {
+const SingleFaq = ({
+  question,
+  index,
+  toggleFaq,
+  animate,
+  initial,
+  exit,
+  transition,
+}) => {
   return (
-    <StyledSingleFaq onClick={() => toggleFaq(index)}>
+    <StyledSingleFaq
+      initial={initial}
+      animate={animate}
+      exit={exit}
+      transition={transition}
+      onClick={() => toggleFaq(index)}
+    >
       <div className={`faq ${question.active ? "open" : ""}`}>
         <div className='faq-title'>
           <h4 className='title'>
@@ -31,7 +46,7 @@ const SingleFaq = ({ question, index, toggleFaq }) => {
   );
 };
 
-const StyledSingleFaq = styled.li`
+const StyledSingleFaq = styled(motion.li)`
   .faq {
     background: #fff7f5;
     box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
@@ -141,6 +156,15 @@ const StyledSingleFaq = styled.li`
       line-height: 30px;
       color: #402b2b;
       padding: 2rem 1rem;
+    }
+  }
+
+  @media (max-width: 830px) {
+    .faq-title {
+      height: 100%;
+      h4.title {
+        padding: 2rem;
+      }
     }
   }
 `;
