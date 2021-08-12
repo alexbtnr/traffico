@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReusableButton from "./ReusableButton";
 
@@ -31,7 +32,9 @@ const FooterForm = () => {
             />
           </div>
           <div className='form-button'>
-            <ReusableButton text={"get started"} icon longBtn />
+            <Link to='/progress'>
+              <ReusableButton text={"get started"} icon longBtn />
+            </Link>
           </div>
         </form>
       </div>

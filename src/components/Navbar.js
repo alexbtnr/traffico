@@ -3,8 +3,10 @@ import styled from "styled-components";
 import ReusableButton from "./ReusableButton";
 import Hamburger from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <StyledNavbar>
@@ -18,9 +20,19 @@ const Navbar = () => {
         <li className='main-nav-link'>
           <a href='#faq'>Faqs</a>
         </li>
-        <li className='main-nav-btn'>
-          <ReusableButton text='Contact us' />
-        </li>
+        {location.pathname === "/" ? (
+          <li className='main-nav-btn'>
+            <Link to='/progress'>
+              <ReusableButton text='Contact us' />
+            </Link>
+          </li>
+        ) : (
+          <li className='main-nav-btn'>
+            <Link to='/'>
+              <ReusableButton text='Homepage' />
+            </Link>
+          </li>
+        )}
       </ul>
       <div className='mobile-nav'>
         <AnimatePresence>

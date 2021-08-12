@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReusableButton from "./ReusableButton";
 
@@ -8,7 +9,9 @@ const CallToAction = () => {
       <h1>
         Your awesome <br /> traffic permit <br /> consultant.
       </h1>
-      <ReusableButton text='Get started' icon longBtn />
+      <Link to='/progress'>
+        <ReusableButton text='Get started' icon longBtn />
+      </Link>
     </StyledHero>
   );
 };
