@@ -1,7 +1,9 @@
+import { AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import LoadMore from "./LoadMore";
 import SingleFaq from "./SingleFaq";
+import { motion } from "framer-motion";
 
 const QuestionsContainer = () => {
   const [questions, setQuestions] = useState([]);
@@ -58,7 +60,7 @@ const QuestionsContainer = () => {
 
   return (
     <StyledQuestionsContainer>
-      <ul>
+      <motion.ul>
         {questions.map((question, index) => (
           <SingleFaq
             key={index}
@@ -67,34 +69,42 @@ const QuestionsContainer = () => {
             toggleFaq={toggleFaq}
           />
         ))}
+        <AnimatePresence>
+          {moreQuestions.length > 0 && (
+            <SingleFaq
+              className={
+                moreQuestions.length > 0 ? "more-questions" : "less-questions"
+              }
+              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: "-100vw" }}
+              exit={{ opacity: 0, x: "-100vw" }}
+              transition={{ duration: 0.5 }}
+              question={questions[0]}
+              key={0}
+              index={0}
+              toggleFaq={toggleFaq}
+            />
+          )}
 
-        {moreQuestions.length > 0 && (
-          <SingleFaq
-            className={
-              moreQuestions.length > 0 ? "more-questions" : "less-questions"
-            }
-            question={questions[0]}
-            key={0}
-            index={0}
-            toggleFaq={toggleFaq}
-          />
-        )}
-
-        {moreQuestions.length > 0 && (
-          <SingleFaq
-            className={
-              moreQuestions.length > 0 ? "more-questions" : "less-questions"
-            }
-            question={questions[1]}
-            key={1}
-            index={1}
-            toggleFaq={toggleFaq}
-          />
-        )}
-
+          {moreQuestions.length > 0 && (
+            <SingleFaq
+              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: "100vw" }}
+              exit={{ opacity: 0, x: "100vw" }}
+              transition={{ duration: 0.5 }}
+              className={
+                moreQuestions.length > 0 ? "more-questions" : "less-questions"
+              }
+              question={questions[1]}
+              key={1}
+              index={1}
+              toggleFaq={toggleFaq}
+            />
+          )}
+        </AnimatePresence>
         <li className='nothing'>nothing</li>
         <LoadMore showMore={showMore} getMoreQuestions={getMoreQuestions} />
-      </ul>
+      </motion.ul>
     </StyledQuestionsContainer>
   );
 };
@@ -115,6 +125,12 @@ const StyledQuestionsContainer = styled.div`
     }
     li.less-questions {
       display: none;
+    }
+  }
+
+  @media (max-width: 830px) {
+    ul {
+      grid-template-columns: 1fr;
     }
   }
 `;

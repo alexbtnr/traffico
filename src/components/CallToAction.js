@@ -14,8 +14,6 @@ const CallToAction = () => {
 };
 
 const StyledHero = styled.div`
-  /* background: blue; */
-
   h1 {
     font-family: DM Serif Display;
     font-style: normal;
@@ -24,6 +22,13 @@ const StyledHero = styled.div`
     line-height: 100%;
     margin-bottom: 3rem;
     color: #ffffff;
+  }
+
+  @media (max-width: 830px) {
+    h1 {
+      font-size: 40px;
+      line-height: 100%;
+    }
   }
 `;
 

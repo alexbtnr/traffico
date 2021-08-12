@@ -66,6 +66,35 @@ const StyledSocialMedia = styled.div`
       }
     }
   }
+
+  @media (max-width: 830px) {
+    .container {
+      .flex-footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+
+        .flex-left,
+        .flex-right {
+          width: 100%;
+        }
+
+        .flex-right {
+          /* display: flex;
+          justify-content: center; */
+
+          .social-icons {
+            display: flex;
+            justify-content: space-around;
+            i.lab {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default SocialMedia;

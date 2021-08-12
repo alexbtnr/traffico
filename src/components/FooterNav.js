@@ -5,7 +5,7 @@ import Logo from "./Logo";
 const FooterNav = () => {
   return (
     <StyledFooterNav>
-      <Logo />
+      <Logo id='footerLogo' />
       <nav>
         <ul className='main-nav'>
           <li className='main-nav-link'>
@@ -60,6 +60,22 @@ const StyledFooterNav = styled.div`
           transform: scaleX(1);
         }
       }
+    }
+  }
+
+  @media (max-width: 830px) {
+    flex-direction: column;
+    margin: 0 auto;
+    div {
+      width: 100%;
+      img {
+        margin: 0 auto;
+        width: 100%;
+      }
+      padding-bottom: 2rem;
+    }
+    nav {
+      width: 100%;
     }
   }
 `;

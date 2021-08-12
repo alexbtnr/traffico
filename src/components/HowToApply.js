@@ -51,6 +51,27 @@ const StyledHowToApply = styled.section`
       }
     }
   }
+
+  @media (max-width: 830px) {
+    div.container {
+      div.flex-container {
+        flex-direction: column-reverse;
+        gap: 5rem;
+        .flex-left,
+        .flex-right {
+          min-width: 100%;
+        }
+
+        .flex-left {
+          aside {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default HowToApply;

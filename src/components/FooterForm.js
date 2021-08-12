@@ -127,6 +127,19 @@ const StyledFooterForm = styled.div`
       }
     }
   }
+
+  @media (max-width: 830px) {
+    flex-direction: column;
+    padding-top: 5rem;
+    gap: 8rem;
+    .flex-left,
+    .flex-right {
+      min-width: 100%;
+    }
+
+    .flex-right {
+    }
+  }
 `;
 
 export default FooterForm;

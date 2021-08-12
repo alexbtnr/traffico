@@ -26,7 +26,7 @@ const StyledFooter = styled.div`
 
   img.small-truck {
     position: absolute;
-    top: -30%;
+    top: -13%;
   }
 
   .background-color {
@@ -38,6 +38,13 @@ const StyledFooter = styled.div`
     background: #0f264c;
     z-index: -1;
     border-radius: 0 150px 0 0;
+  }
+
+  @media (max-width: 830px) {
+    .background-color {
+      width: 100%;
+      border-radius: 0;
+    }
   }
 `;
 

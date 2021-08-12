@@ -60,6 +60,31 @@ const StyledFaq = styled.section`
       }
     }
   }
+
+  @media (max-width: 830px) {
+    .background-color {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    div.container {
+      div.flex-container {
+        flex-direction: column;
+        gap: 0;
+
+        .flex-left,
+        .flex-right {
+          width: 100%;
+        }
+
+        .flex-right {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default Faq;
