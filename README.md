@@ -1,7 +1,9 @@
 # Welcome to Trafico **Version 1.0.0**
 
 This is a presentation website for a traffic permit company which tells you why and how to obtain a traffic.
+
 Email: alex.butnaru1102@gmail.com
+
 Link: https://traffico-webamboos.netlify.app/
 
 ---
