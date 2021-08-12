@@ -94,6 +94,29 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (max-width: 830px) {
+    img.hero-background {
+      width: 100%;
+      object-position: right center;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    img.people {
+      display: none;
+    }
+
+    .navbar-container {
+      padding-top: 1rem;
+    }
+
+    img.truck {
+      margin-top: 14.5rem;
+      height: 12rem;
+      z-index: 10;
+    }
+  }
 `;
 
 export default Header;
