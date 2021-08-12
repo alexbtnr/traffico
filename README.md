@@ -1,3 +1,29 @@
+# Welcome to Trafico **Version 1.0.0**
+
+This is a presentation website for a traffic permit company which tells you why and how to obtain a traffic permit.
+
+Email: alex.butnaru1102@gmail.com
+
+Link: https://traffico-webamboos.netlify.app/
+
+---
+
+## Technologies used
+
+To make this web-app I've used create-react-app together with the following packages:
+- react-router-dom
+- framer-motion
+- react-intersection-observer
+- styled-components
+- hamburger-react
+
+---
+
+## License and Copyright
+© Butnaru Alexandru, 2021
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
