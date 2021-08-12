@@ -50,6 +50,26 @@ const StyledAboutUs = styled.section`
       }
     }
   }
+
+  @media (max-width: 830px) {
+    div.flex-container {
+      flex-direction: column;
+
+      .flex-left,
+      .flex-right {
+        min-width: 100%;
+      }
+
+      .flex-right {
+        aside {
+          margin-top: 2rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default AboutUs;

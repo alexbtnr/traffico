@@ -32,6 +32,17 @@ const StyledCard = styled.div`
     width: 80%;
     height: 62%;
   }
+
+  @media (max-width: 830px) {
+    height: 100%;
+    width: 100%;
+
+    h4 {
+      font-size: 1rem;
+      line-height: 25px;
+      padding: 1rem 0;
+    }
+  }
 `;
 
 export default AboutUsCard;
