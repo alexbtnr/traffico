@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../components/Logo";
-import Navbar from "../components/Navbar";
+import ReusableButton from "../components/ReusableButton";
 import SocialMedia from "../components/SocialMedia";
 import background from "../images/background.png";
 import truck from "../images/truck.png";
@@ -18,7 +19,10 @@ const WorkInProgress = () => {
       <div className='container'>
         <div className='flex-container'>
           <Logo />
-          <Navbar />
+          {/* <Navbar /> */}
+          <Link to='/'>
+            <ReusableButton text='Homepage' />
+          </Link>
         </div>
         <div ref={element} className='truck-img-container'>
           <motion.img
@@ -49,10 +53,9 @@ const WorkInProgress = () => {
 const StyledWorkInProgress = styled.div`
   img.hero-background {
     position: absolute;
-    height: 801.84px;
-    width: 80%;
     width: 100%;
     height: 85vh;
+    max-height: 85vh;
     top: 0;
     left: 0;
     z-index: -1;
@@ -65,8 +68,7 @@ const StyledWorkInProgress = styled.div`
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    img {
-    }
+
     .text-container {
       position: absolute;
       top: 0;
@@ -101,6 +103,30 @@ const StyledWorkInProgress = styled.div`
     bottom: 0;
     width: 100%;
     z-index: -1;
+    height: 15vh;
+    max-height: 15vh;
+  }
+
+  @media (max-width: 830px) {
+    .container {
+      .flex-container {
+        flex-direction: column;
+        gap: 2rem;
+        div {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .truck-img-container {
+      left: 0;
+      bottom: 30%;
+      transform: translateX(0);
+      transform: translateY(30%);
+      img {
+        width: 90%;
+      }
+    }
   }
 `;
 
