@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../components/Logo";
@@ -12,6 +12,9 @@ import { useScroll } from "../utils/useScroll";
 
 const WorkInProgress = () => {
   const [element, controls] = useScroll();
+  useEffect(() => {
+    document.title = "Trafico | Work In Progress";
+  }, []);
 
   return (
     <StyledWorkInProgress>
