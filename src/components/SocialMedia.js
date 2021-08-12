@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SocialMedia = () => {
@@ -13,9 +14,15 @@ const SocialMedia = () => {
           </div>
           <div className='flex-right'>
             <div className='social-icons'>
-              <i className='lab la-facebook-f la-2x'></i>
-              <i className='lab la-twitter la-2x'></i>
-              <i className='lab la-instagram la-2x'></i>
+              <Link to='/progress'>
+                <i className='lab la-facebook-f la-2x'></i>
+              </Link>
+              <Link to='/progress'>
+                <i className='lab la-twitter la-2x'></i>
+              </Link>
+              <Link to='/progress'>
+                <i className='lab la-instagram la-2x'></i>
+              </Link>
             </div>
           </div>
         </div>
